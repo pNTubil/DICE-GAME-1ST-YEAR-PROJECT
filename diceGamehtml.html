@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="diceGamestyle.css">
+
+        <title>TWO PLAYER DICE GAME by: Princess Noelyn T. Tubil</title>
+    </head>
+    
+    <body>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>  
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+            <div id="start" style="display:block">
+            <h3>TWO PLAYER DICE GAME</h3>
+            <a href="#" onclick="startGame()">START GAME</a>
+            </div> 
+
+    <div id="canvas" style="display: none">
+        <div class="wrapper clearfix">
+            <h1 class="limit-display">Default Score limit :</h1>
+            <span class="limit-score"></span>
+            <center><h2>TWO PLAYER DICE GAME</h2></center>
+            <div class="player-0-side active">
+                    <div class="Player1" id="playerName-0">Player 1</div>
+                    <div class="player-score" id="playerScore-0"></div>
+                    <div class="player-current-box">
+                    <div class="player-current-holder">Round Score</div>
+                    <div class="player-current-score" id="currentScore-0"></div>
+            </div>
+            </div>
+            <div class="box-holder" id="holder">
+            <h5>RULES:</h5>
+            <p>The game is played in rounds by two players. A player may roll the two dice as many times as he or she wishes during each turn. Each result is added to the player's round score, but if the player rolls a 1 on either of the two dice, the entire round score is lost. Then it's the turn of the next player. The player can choose to "Hold," which adds his or her round score to his or her global score. Then it's the turn of the next player. The first player to reach 100 points or the game's points limit wins.
+            </p>
+            </div>
+           <div class="player-1-side">
+                    <div class="Player2" id="playerName-1">Player 2</div>
+                    <div class="player-score" id="playerScore-1"></div>
+                    <div class="player-current-box">
+                    <div class="player-current-holder">Round Score</div>
+                    <div class="player-current-score" id="currentScore-1"></div>
+                </div>  
+            </div>
+            
+            <input onfocus="this.placeholder = ''" class="input-value" type="number" name="setMaxValue" onblur="this.placeholder='Enter score limit'">
+            <button class="setVal_Button"><i class="ion-ios-checkmark"></i>Set a limit</button>
+            <button class="restart-btn"><ion-icon name="game-controller-outline"></ion-icon>restart</button>
+            <button class="roll_Button"><ion-icon name='dice-outline'></ion-icon>Roll the dice</button>
+            <button class="hold_button"><ion-icon name="download-outline"></ion-icon>Hold</button>
+            <button type="button" class="btn" onclick="editNames()"><ion-icon name="pencil-outline"></ion-icon>EDIT NAMES</button>
+            <button id="buttonRule" class="btn-rules">GAME RULES</button>
+            <button id="buttonReturn" class="btn-return"><ion-icon name="arrow-undo-outline"></ion-icon>RETURN</button>
+            <img src="die5.gif" alt="Dice" class="d die1">
+            <img src="die5.gif" alt="Dice" class="d die2"> 
+        </div>
+    </div>
+      
+      <script src="diceGamescript.js"></script>
+    </body>
+</html>
